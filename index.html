@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Programs Output</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .output {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #ffffff;
+      border-left: 4px solid #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Print Name and Address</h2>
+  <div id="output1" class="output"></div>
+
+  <h2>2. Check Value and Data Type of Two Variables</h2>
+  <div id="output2" class="output"></div>
+
+  <h2>3. Add Two Strings and Convert to Uppercase</h2>
+  <div id="output3" class="output"></div>
+
+  <h2>4. Length of String in Bytes</h2>
+  <div id="output4" class="output"></div>
+
+  <h2>5. Round a Number to Specified Digits</h2>
+  <div id="output5" class="output"></div>
+
+  <script>
+    // 1. Print Name and Address
+    const name = "Reetika Raj";
+    const address = "Jehanabad, Bihar, India";
+    document.getElementById("output1").innerText = "Name: " + name + "\nAddress: " + address;
+
+    // 2. Check value and data type of two variables
+    let a = 5;
+    let b = "5";
+    let result = (a === b) ? "Same Value and Data Type" : "Different Value or Data Type";
+    document.getElementById("output2").innerText = `a = ${a} (${typeof a}), b = ${b} (${typeof b})\nResult: ${result}`;
+
+    // 3. Add two strings and convert to uppercase
+    let str1 = "hello";
+    let str2 = "world";
+    let combined = (str1 + str2).toUpperCase();
+    document.getElementById("output3").innerText = `Combined String: ${combined}`;
+
+    // 4. Convert length of string to bytes
+    let str = "JavaScript";
+    let byteLength = new TextEncoder().encode(str).length;
+    document.getElementById("output4").innerText = `String: "${str}" has ${byteLength} bytes`;
+
+    // 5. Round a number to specified digits
+    let num = 3.14159265359;
+    let digits = 4;
+    let rounded = Number(num.toFixed(digits));
+    document.getElementById("output5").innerText = `Original: ${num}\nRounded to ${digits} digits: ${rounded}`;
+  </script>
+
+</body>
+</html>
